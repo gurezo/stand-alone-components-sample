@@ -1,7 +1,6 @@
 import 'zone.js/dist/zone.js';
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { bootstrapApplication } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -13,5 +12,3 @@ import { bootstrapApplication } from '@angular/platform-browser';
 export class AppComponent {
   title = 'stand alone components sample';
 }
-
-bootstrapApplication(AppComponent).catch((error) => console.error(error));
