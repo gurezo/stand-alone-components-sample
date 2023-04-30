@@ -7,6 +7,11 @@
 
 - スタンドアロンコンポーネント作成
 
-```sh
-ng g c hoge --standalone
-```
+  ```sh
+  ng g c hoge --standalone
+  ```
+
+- 複数のコンポーネントの配列リストに入れて、imports セクションで NgModuke と同じ様に宣言
+
+- 個人的には、NgModule で、宣言しているから分かりやすい。
+- list 側で、list-item 内包してしまえば、簡素に実装できる
