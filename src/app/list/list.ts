@@ -1,7 +1,3 @@
-export class List {
+export interface List {
   name: string;
-
-  constructor() {
-    this.name = '';
-  }
 }

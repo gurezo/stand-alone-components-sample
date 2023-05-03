@@ -1,6 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { Observable, filter, of } from 'rxjs';
+
 import { ListItemComponent } from './list-item/list-item.component';
+import { ListService } from './list.service';
+import { List } from './list';
 
 @Component({
   selector: 'app-list',
@@ -8,5 +13,22 @@ import { ListItemComponent } from './list-item/list-item.component';
   imports: [CommonModule, ListItemComponent],
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css'],
+  providers: [{ provide: ListService, useClass: ListService }],
 })
-export class ListComponent {}
+export class ListComponent implements OnInit {
+  list$: Observable<List[]> = of([]);
+  list: List[] = [];
+
+  readonly service = inject(ListService);
+
+  constructor() {}
+
+  ngOnInit(): void {
+    this.list = this.service.get();
+
+    // this.service
+    //   .get()
+    //   .pipe(filter((list) => !!list && list.length > 0))
+    //   .subscribe((list) => (this.list = list));
+  }
+}
