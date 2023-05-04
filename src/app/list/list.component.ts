@@ -24,11 +24,8 @@ export class ListComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.list = this.service.get();
-
-    // this.service
-    //   .get()
-    //   .pipe(filter((list) => !!list && list.length > 0))
-    //   .subscribe((list) => (this.list = list));
+    this.list$ = this.service
+      .get()
+      .pipe(filter((list) => !!list && list.length > 0));
   }
 }
