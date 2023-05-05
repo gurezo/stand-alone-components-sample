@@ -4,11 +4,12 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { ListComponent } from './list/list.component';
+import { HTagStyleDirective } from './h-tag-style.directive';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, ListComponent],
+  imports: [CommonModule, RouterOutlet, HTagStyleDirective, ListComponent],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
