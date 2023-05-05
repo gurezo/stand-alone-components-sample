@@ -17,12 +17,6 @@
 - list 側で、list-item 内包してしまえば、簡素に実装できる
 
 <div class="headline-m">
-<a href="https://zenn.dev/lacolaco/books/angular-standalone-components/viewer/routing">ルーティング</a> 
-</div>
-
-TBD
-
-<div class="headline-m">
 <a href="https://zenn.dev/lacolaco/books/angular-standalone-components/viewer/directive-composition">ディレクティブの合成</a> 
 </div>
 
