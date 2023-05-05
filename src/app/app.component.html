@@ -1,3 +1,6 @@
-<h1 appHTagStyle>{{ title }}</h1>
+<h1 *appCompositionNgif="isShowH1">{{ title }}</h1>
 
+<button (click)="isShowH1 = !isShowH1">
+  now header 1 is {{ isShowH1 ? "show" : "hide" }}
+</button>
 <router-outlet></router-outlet>
