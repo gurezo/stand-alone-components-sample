@@ -1,8 +1,23 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ApplicationConfig } from '@angular/platform-browser';
+import { provideHttpClient } from '@angular/common/http';
 
-@NgModule({
-  declarations: [],
-  imports: [CommonModule],
-})
-export class AppConfigModule {}
+import {
+  provideRouter,
+  withDebugTracing,
+  withHashLocation,
+  withInMemoryScrolling,
+} from '@angular/router';
+import { routes } from './app.routes';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideHttpClient(),
+    provideRouter(
+      routes,
+      // 複数のオプションを同時に指定する
+      withHashLocation(),
+      withDebugTracing(),
+      withInMemoryScrolling()
+    ),
+  ],
+};
