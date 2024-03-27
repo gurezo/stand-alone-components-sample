@@ -1,5 +1,5 @@
-import { ApplicationConfig } from '@angular/platform-browser';
 import { provideHttpClient } from '@angular/common/http';
+import { ApplicationConfig } from '@angular/platform-browser';
 
 import {
   provideRouter,
@@ -7,7 +7,7 @@ import {
   withHashLocation,
   withInMemoryScrolling,
 } from '@angular/router';
-import { routes } from './app.routes';
+import routes from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
