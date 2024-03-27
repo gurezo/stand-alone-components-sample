@@ -12,10 +12,10 @@ import { HTagStyleDirective } from './shared/directive/h-tag-style.directive';
   standalone: true,
   imports: [
     CommonModule,
-    RouterOutlet,
-    HTagStyleDirective,
     CompositionNgifDirective,
+    HTagStyleDirective,
     ListComponent,
+    RouterOutlet,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
