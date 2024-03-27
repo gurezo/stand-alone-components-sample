@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { ListComponent } from '../list/list.component';
@@ -11,4 +11,4 @@ import { ListComponent } from '../list/list.component';
   templateUrl: './parent.component.html',
   styleUrls: ['./parent.component.css'],
 })
-export class ParentComponent {}
+export default class ParentComponent {}
