@@ -1,8 +1,6 @@
-import { Routes } from '@angular/router';
-
-export const routes: Routes = [
+export default [
   {
     path: '',
-    loadChildren: () => import('./parent.routes').then((m) => m.parentRoutes),
+    loadChildren: () => import('./parent/parent.routes'),
   },
 ];
