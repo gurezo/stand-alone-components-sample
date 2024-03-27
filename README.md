@@ -1,6 +1,6 @@
 # StandAloneComponentsSample
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
 
 This is stand alone components sample by Angular
 
