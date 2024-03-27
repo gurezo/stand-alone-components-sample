@@ -1,15 +1,11 @@
-import { Routes } from '@angular/router';
-
-export const parentRoutes: Routes = [
+export default [
   {
     path: '',
-    loadComponent: () =>
-      import('./parent/parent.component').then((m) => m.ParentComponent),
+    loadComponent: () => import('./parent.component'),
     children: [
       {
         path: '',
-        loadChildren: () =>
-          import('./child.routes').then((mod) => mod.childRoutes),
+        loadChildren: () => import('../child/child.routes'),
       },
     ],
   },
